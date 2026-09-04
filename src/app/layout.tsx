@@ -53,8 +53,12 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
   },
 };
 
@@ -66,7 +70,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} font-sans`}>
       <head>
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         {children}
