@@ -68,13 +68,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDemo }) => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-4">
-            <button
-              onClick={onOpenDemo}
+            <a
+              href={APP_CONFIG.loginUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-brand hover:opacity-95 shadow-xl hover:shadow-glow-cyan rounded-xl transition-all duration-200 transform hover:-translate-y-0.5"
             >
-              <span>Comenzar Prueba Gratis (14 días)</span>
+              <span>Ingresar a la Plataforma</span>
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
 
             <a
               href={`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(APP_CONFIG.whatsappMessage)}`}
@@ -89,7 +91,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDemo }) => {
 
           {/* Small Sub-cta Note */}
           <p className="text-xs text-slate-500 pt-1">
-            ⚡ Configuración rápida • Sin tarjeta de crédito • Acompañamiento personalizado 24/7
+            ⚡ Implementación rápida • Acceso seguro en la nube • Soporte 24/7
           </p>
         </div>
 

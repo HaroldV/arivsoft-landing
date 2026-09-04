@@ -61,16 +61,16 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
                     className="h-9 w-auto object-contain"
                   />
                 </div>
-                <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
-                  <Sparkles className="w-3.5 h-3.5 text-brand-emerald" />
-                  <span>14 Días Gratis</span>
+                <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-100 text-brand-navy text-xs font-bold border border-slate-200">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-cyan" />
+                  <span>Acceso Inmediato</span>
                 </div>
               </div>
               <h3 className="text-2xl font-black text-brand-navy-950">
-                Activa tu cuenta de ArivSoft ERP
+                Accede a ArivSoft ERP
               </h3>
               <p className="text-xs sm:text-sm text-slate-600">
-                Completa los datos de tu empresa para configurar tu entorno en la nube en menos de 2 minutos.
+                Completa los datos de tu empresa para configurar tu acceso a la plataforma en la nube.
               </p>
             </div>
 

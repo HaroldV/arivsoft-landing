@@ -27,19 +27,20 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenDemo }) => {
         </h2>
 
         <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Sin contratos a largo plazo, sin tarjetas de crédito para probar. Configura tu empresa en minutos y empieza a operar con la plataforma ERP más potente de la nube.
+          Sin contratos forzosos ni complicaciones técnicas. Configura tu empresa en minutos y empieza a operar con la plataforma ERP más potente de la nube.
         </p>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <button
-            onClick={onOpenDemo}
-            className="w-full sm:w-auto px-8 py-4 text-base font-extrabold text-brand-navy-950 bg-gradient-to-r from-brand-cyan via-brand-emerald-light to-brand-emerald hover:opacity-95 shadow-glow-emerald rounded-xl transition-all transform hover:-translate-y-0.5"
+          <a
+            href={APP_CONFIG.loginUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-4 text-base font-extrabold text-brand-navy-950 bg-gradient-to-r from-brand-cyan via-brand-emerald-light to-brand-emerald hover:opacity-95 shadow-glow-emerald rounded-xl transition-all transform hover:-translate-y-0.5 inline-flex items-center justify-center"
           >
-            <span className="flex items-center justify-center">
-              Comenzar Prueba Gratuita (14 Días) <ArrowRight className="w-5 h-5 ml-2" />
-            </span>
-          </button>
+            <span>Ingresar a la Plataforma ArivSoft</span>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </a>
 
           <a
             href={`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(APP_CONFIG.whatsappMessage)}`}

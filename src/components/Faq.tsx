@@ -25,7 +25,7 @@ export const Faq: React.FC = () => {
             Preguntas frecuentes sobre ArivSoft ERP
           </h2>
           <p className="text-base text-slate-600">
-            Todo lo que necesitas saber antes de comenzar tu prueba gratuita de 14 días.
+            Todo lo que necesitas saber para potenciar la gestión y finanzas de tu negocio.
           </p>
         </div>
 

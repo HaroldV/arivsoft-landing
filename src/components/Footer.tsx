@@ -81,14 +81,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDemo }) => {
                 </a>
               </li>
               <li>
-                <button
-                  onClick={onOpenDemo}
+                <a
+                  href={`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(APP_CONFIG.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-bold text-brand-emerald-light hover:text-white transition-colors"
                 >
-                  → Solicitar Demo Gratuita
-                </button>
+                  → Hablar con un Asesor (+58 4246455681)
+                </a>
               </li>
               <li className="flex items-center space-x-2 pt-1 text-slate-400">
+                <Phone className="w-3.5 h-3.5 text-brand-emerald" />
+                <a
+                  href={`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(APP_CONFIG.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  +58 424 6455681
+                </a>
+              </li>
+              <li className="flex items-center space-x-2 text-slate-400">
                 <Mail className="w-3.5 h-3.5 text-brand-cyan" />
                 <span>contacto@arivsoft.com</span>
               </li>

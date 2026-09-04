@@ -72,11 +72,11 @@ export interface FaqItem {
 export const APP_CONFIG = {
   appName: "ArivSoft Solutions",
   shortName: "ArivSoft",
-  appUrl: "https://arivsoft.com",
-  loginUrl: "https://arivsoft.com",
-  registerUrl: "https://arivsoft.com",
-  demoUrl: "https://arivsoft.com",
-  whatsappNumber: "584120000000",
+  appUrl: "https://app.arivsoft.com/login",
+  loginUrl: "https://app.arivsoft.com/login",
+  registerUrl: "https://app.arivsoft.com/login",
+  demoUrl: "https://app.arivsoft.com/login",
+  whatsappNumber: "584246455681",
   whatsappMessage: "¡Hola ArivSoft! Me interesa conocer más sobre la plataforma ERP y solicitar una demostración personalizada.",
   supportEmail: "soporte@arivsoft.com",
   salesEmail: "ventas@arivsoft.com",
@@ -585,7 +585,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Actualización masiva de precios",
       "Notas de recepción y pedidos avanzados"
     ],
-    ctaText: "Comenzar Prueba Gratis",
+    ctaText: "Ingresar a la Plataforma",
     ctaType: "secondary"
   },
   {
@@ -703,7 +703,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: "faq-6",
     category: "general",
-    question: "¿Cómo funciona la prueba gratuita de 14 días?",
-    answer: "Puedes crear tu cuenta y acceder de inmediato a todas las funciones del Plan Crecimiento durante 14 días de forma 100% gratuita. No te solicitamos tarjeta de crédito para iniciar la prueba."
+    question: "¿Cómo puedo acceder y comenzar a usar ArivSoft?",
+    answer: "Puedes ingresar directamente a la plataforma desde app.arivsoft.com/login o comunicarte con nuestro equipo comercial por WhatsApp al +58 4246455681 para recibir una demostración personalizada y activar el plan ideal para tu empresa."
   }
 ];

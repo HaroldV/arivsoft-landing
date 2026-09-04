@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { PRICING_PLANS } from "@/data/content";
+import { PRICING_PLANS, APP_CONFIG } from "@/data/content";
 import { Check, Sparkles, ArrowRight, ShieldCheck, Building2, Layers, CheckCircle2 } from "lucide-react";
 
 interface PricingProps {
@@ -25,7 +25,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenDemo }) => {
             Soluciones diseñadas para cada etapa de tu empresa
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Desde pequeños comercios hasta empresas multisede y corporativos. Comienza con una prueba gratuita de 14 días o solicita una propuesta personalizada.
+            Desde pequeños comercios hasta empresas multisede y corporativos. Accede a la plataforma o solicita una asesoría personalizada para tu empresa.
           </p>
         </div>
 
@@ -112,8 +112,16 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenDemo }) => {
 
                 {/* CTA Button */}
                 <div className="pt-8 mt-6 border-t border-slate-700/40">
-                  <button
-                    onClick={onOpenDemo}
+                  <a
+                    href={
+                      plan.id === "enterprise"
+                        ? `https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+                            "¡Hola ArivSoft! Me interesa cotizar el Plan Corporativo / Enterprise a medida para mi empresa."
+                          )}`
+                        : APP_CONFIG.loginUrl
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-3.5 px-6 rounded-xl font-bold text-sm transition-all flex items-center justify-center space-x-2 ${
                       isPopular
                         ? "bg-gradient-to-r from-brand-cyan to-brand-emerald text-brand-navy-950 hover:opacity-95 shadow-md"
@@ -122,9 +130,9 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenDemo }) => {
                   >
                     <span>{plan.ctaText}</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                   <p className={`text-[11px] text-center mt-2.5 ${isPopular ? "text-slate-400" : "text-slate-500"}`}>
-                    Prueba 14 días gratis • Sin compromiso • Asesoría personalizada
+                    Implementación guiada • Sin contratos forzosos • Soporte 24/7
                   </p>
                 </div>
               </div>
@@ -147,12 +155,16 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenDemo }) => {
               </p>
             </div>
           </div>
-          <button
-            onClick={onOpenDemo}
-            className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-brand hover:opacity-95 shadow-md flex-shrink-0"
+          <a
+            href={`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+              "¡Hola ArivSoft! Deseo solicitar una asesoría personalizada para mi empresa."
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-brand hover:opacity-95 shadow-md flex-shrink-0 inline-flex items-center justify-center"
           >
             Solicitar Asesoría VIP
-          </button>
+          </a>
         </div>
       </div>
     </section>
